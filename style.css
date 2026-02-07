@@ -599,7 +599,7 @@
         .cv-item::before {
             content: '';
             position: absolute;
-            left: -30px;
+            left: -37px;
             top: 8px;
             width: 12px;
             height: 12px;
