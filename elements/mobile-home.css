@@ -1,0 +1,495 @@
+/* ================================ */
+/* Mobile Responsive Styles         */
+/* For Homepage Specific Content    */
+/* ================================ */
+
+/* Media query for tablets (max-width: 992px) */
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-text {
+        padding-right: 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .hero-image {
+        height: auto;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .hero-details {
+        gap: 20px;
+    }
+
+    .hero-divider {
+        flex-direction: column;
+        gap: 15px;
+        margin: 40px 0;
+    }
+
+    .divider-line {
+        width: 100%;
+        height: 2px;
+    }
+
+    .divider-text {
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+
+    .news-timeline {
+        padding-left: 20px;
+    }
+
+    .news-item {
+        margin-bottom: 20px;
+    }
+
+    .education-timeline {
+        padding-left: 10px;
+    }
+
+    .education-item {
+        padding-left: 20px;
+    }
+
+    .edu-icon {
+        left: -14px;
+    }
+
+    .interests-grid,
+    .quick-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Media query for tablets/smaller devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-image {
+        height: auto;
+        width: 100%;
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .hero-details {
+        gap: 15px;
+    }
+
+    .hero-institution,
+    .hero-focus {
+        gap: 10px;
+    }
+
+    .hero-institution i,
+    .hero-focus i {
+        font-size: 1rem;
+    }
+
+    /* Divider */
+    .hero-divider {
+        margin: 30px 0;
+        gap: 12px;
+    }
+
+    .divider-text {
+        font-size: 0.85rem;
+    }
+
+    .divider-text i {
+        font-size: 0.9rem;
+    }
+
+    /* Timeline sections */
+    .education-timeline {
+        padding-left: 10px;
+    }
+
+    .education-item {
+        padding-left: 15px;
+        margin-bottom: 20px;
+    }
+
+    .edu-icon {
+        left: -10px;
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+
+    .edu-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .edu-institution,
+    .edu-supervisors,
+    .edu-team {
+        font-size: 0.9rem;
+    }
+
+    /* News timeline */
+    .news-timeline {
+        padding-left: 20px;
+    }
+
+    .news-item {
+        margin-bottom: 25px;
+        padding: 15px;
+    }
+
+    .news-date {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+
+    .news-date .news-day {
+        font-size: 1.2rem;
+    }
+
+    .news-date .news-month {
+        font-size: 0.85rem;
+    }
+
+    .news-date .news-year {
+        font-size: 0.8rem;
+    }
+
+    .news-content {
+        padding-left: 0;
+    }
+
+    .news-description {
+        font-size: 0.95rem;
+    }
+
+    /* Cards grid */
+    .interests-grid,
+    .quick-links-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .interest-card,
+    .quick-link {
+        padding: 20px;
+    }
+
+    .interest-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+
+    .interest-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .interest-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Content sections */
+    .content-section-inner {
+        padding: 0;
+    }
+}
+
+/* Media query for small mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        height: auto;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .hero-details {
+        gap: 12px;
+    }
+
+    .hero-institution,
+    .hero-focus {
+        gap: 8px;
+        font-size: 0.9rem;
+    }
+
+    .hero-institution i,
+    .hero-focus i {
+        margin-top: 2px;
+        font-size: 0.95rem;
+    }
+
+    /* Divider */
+    .hero-divider {
+        margin: 25px 0;
+        gap: 10px;
+    }
+
+    .divider-line {
+        height: 1px;
+    }
+
+    .divider-text {
+        font-size: 0.8rem;
+        gap: 8px;
+    }
+
+    .divider-text i {
+        font-size: 0.85rem;
+    }
+
+    /* News section */
+    .news-section {
+        margin-bottom: 40px;
+    }
+
+    .news-timeline {
+        padding-left: 15px;
+    }
+
+    .news-item {
+        margin-bottom: 20px;
+        padding: 12px;
+    }
+
+    .news-item.highlight {
+        padding: 12px;
+    }
+
+    .news-date {
+        margin-bottom: 12px;
+    }
+
+    .news-date .news-day {
+        font-size: 1.1rem;
+    }
+
+    .news-date .news-month {
+        font-size: 0.8rem;
+    }
+
+    .news-date .news-year {
+        font-size: 0.75rem;
+        margin-left: 5px;
+    }
+
+    .news-description {
+        font-size: 0.9rem;
+    }
+
+    /* Education section */
+    .education-item {
+        padding-left: 15px;
+        margin-bottom: 18px;
+    }
+
+    .edu-icon {
+        left: -12px;
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+    }
+
+    .education-item.current .edu-icon {
+        left: -12px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .edu-content h3 {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+
+    .edu-institution {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+
+    .edu-supervisors,
+    .edu-team {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+
+    .edu-awards {
+        font-size: 0.8rem;
+    }
+
+    /* Interests and cards */
+    .interests-section {
+        margin-top: 40px;
+    }
+
+    .interests-grid,
+    .quick-links-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .interest-card,
+    .quick-link {
+        padding: 18px;
+        border-top: 3px solid var(--accent-color);
+    }
+
+    .interest-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+        margin: 0 auto 15px;
+    }
+
+    .interest-card h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .interest-card p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .quick-link {
+        text-align: center;
+    }
+
+    .quick-link-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .quick-link-title {
+        font-size: 0.95rem;
+    }
+
+    .quick-link-description {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small mobile (max-width: 360px) */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero-image {
+        height: 180px;
+        width: 180px;
+    }
+
+    .hero-details {
+        gap: 10px;
+    }
+
+    .hero-institution,
+    .hero-focus {
+        font-size: 0.85rem;
+    }
+
+    .hero-divider {
+        margin: 20px 0;
+    }
+
+    .divider-text {
+        font-size: 0.75rem;
+    }
+
+    .news-item {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .news-date .news-day {
+        font-size: 1rem;
+    }
+
+    .education-item {
+        margin-bottom: 15px;
+    }
+
+    .edu-content h3 {
+        font-size: 0.95rem;
+    }
+
+    .interests-grid,
+    .quick-links-grid {
+        gap: 12px;
+    }
+
+    .interest-card,
+    .quick-link {
+        padding: 15px;
+    }
+
+    .interest-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .interest-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .interest-card p {
+        font-size: 0.8rem;
+    }
+}

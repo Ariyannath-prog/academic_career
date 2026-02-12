@@ -1,0 +1,677 @@
+/* ================================ */
+/* Mobile Responsive Styles         */
+/* For Elements Pages                */
+/* ================================ */
+
+/* Navigation Drawer Styles */
+.nav-drawer {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.nav-drawer.active {
+    transform: translateX(0);
+}
+
+.nav-drawer-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--medium-gray);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2c5282 100%);
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.nav-drawer-header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.nav-drawer-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.nav-drawer .tab {
+    padding: 15px 20px;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    color: var(--dark-gray);
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: left;
+    border-left: 4px solid transparent;
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+.nav-drawer .tab i {
+    margin-right: 15px;
+    font-size: 1rem;
+    color: var(--accent-color);
+    width: 20px;
+    text-align: center;
+}
+
+.nav-drawer .tab:hover {
+    background-color: var(--light-gray);
+    border-left-color: var(--accent-color);
+}
+
+.nav-drawer .tab.active {
+    background-color: rgba(49, 130, 206, 0.1);
+    color: var(--accent-color);
+    border-left-color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Mobile toggle button - default hidden on desktop */
+.mobile-toggle {
+    display: none;
+}
+
+/* Password Modal - Base Styles for Mobile */
+.password-modal {
+    overflow-y: auto;
+    padding: 20px;
+    display: none !important;
+}
+
+.password-modal.open {
+    display: flex !important;
+}
+
+.password-modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Media query for tablets (max-width: 992px) */
+@media (max-width: 992px) {
+    /* Hide nav-tabs-container on mobile */
+    .nav-tabs-container {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        width: 320px;
+        height: 100vh;
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 40px 30px;
+        min-height: calc(100vh - 100px);
+    }
+
+    .profile-img-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .mobile-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: var(--accent-color);
+        color: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: var(--transition);
+    }
+
+    .mobile-toggle:hover {
+        background: var(--primary-color);
+        transform: scale(1.05);
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    .nav-drawer {
+        display: flex;
+    }
+
+    .nav-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        padding-bottom: 10px;
+        scrollbar-width: thin;
+    }
+
+    /* Password modal for 992px breakpoint */
+    .password-modal {
+        padding: 20px;
+    }
+
+    .password-modal-content {
+        max-width: 450px;
+        width: 90%;
+        padding: 35px 25px;
+    }
+
+    .password-modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    #passwordInput {
+        padding: 12px 15px;
+    }
+
+    #submitPassword, #cancelPassword {
+        padding: 12px 25px;
+    }
+}
+
+/* Media query for tablets and small devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 30px 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-grid,
+    .course-grid,
+    .skills-container,
+    .footer-content,
+    .publication-grid,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-box {
+        padding: 25px;
+    }
+
+    .nav-tabs-container {
+        padding: 10px;
+    }
+
+    .tab {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .tab i {
+        font-size: 0.8rem;
+    }
+
+    .photo-filter-tabs {
+        justify-content: center;
+    }
+
+    .photo-filter {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Publication styles */
+    .publication-item {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .pub-title {
+        font-size: 1.1rem;
+    }
+
+    .pub-authors {
+        font-size: 0.9rem;
+    }
+
+    .pub-venue {
+        font-size: 0.85rem;
+    }
+
+    .pub-links {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .pub-links a {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+
+    /* Blog and article styles */
+    .blog-item {
+        padding: 15px;
+    }
+
+    .blog-header {
+        margin-bottom: 10px;
+    }
+
+    .blog-title {
+        font-size: 1.1rem;
+    }
+
+    .blog-date {
+        font-size: 0.85rem;
+    }
+
+    .blog-excerpt {
+        font-size: 0.95rem;
+    }
+
+    /* Research content */
+    .research-item {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .research-title {
+        font-size: 1.1rem;
+    }
+
+    /* CV and bio styles */
+    .cv-section {
+        margin-bottom: 30px;
+    }
+
+    .cv-section-title {
+        font-size: 1.3rem;
+    }
+
+    .cv-item {
+        padding: 10px 0;
+        margin-bottom: 15px;
+    }
+
+    .cv-item-date {
+        font-size: 0.85rem;
+    }
+
+    .cv-item-title {
+        font-size: 1rem;
+    }
+
+    /* Resource items */
+    .resource-item {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .resource-title {
+        font-size: 1.05rem;
+    }
+
+    .resource-description {
+        font-size: 0.9rem;
+    }
+
+    /* Password modal for 768px+ */
+    .password-modal {
+        padding: 20px;
+    }
+
+    .password-modal-content {
+        max-width: 400px;
+        width: 95%;
+        padding: 35px 25px;
+    }
+
+    .password-modal-content h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .password-modal-content p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    #passwordInput {
+        padding: 12px 15px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    #submitPassword, #cancelPassword {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+        margin: 5px;
+    }
+}
+
+/* Media query for small mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .tab {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+
+    .tab i {
+        margin-right: 4px;
+    }
+
+    .metric-card {
+        padding: 20px;
+    }
+
+    .metric-value {
+        font-size: 2rem;
+    }
+
+    .pub-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pub-links a {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 15px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sidebar mobile */
+    .sidebar {
+        width: 100%;
+    }
+
+    .profile-img-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    .site-title {
+        font-size: 1.4rem;
+    }
+
+    .sidebar-name {
+        font-size: 1.2rem;
+    }
+
+    .bio {
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Publication mobile */
+    .publication-item {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    .pub-title {
+        font-size: 1rem;
+    }
+
+    .pub-authors {
+        font-size: 0.85rem;
+    }
+
+    .pub-venue {
+        font-size: 0.8rem;
+    }
+
+    .pub-badge {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+    }
+
+    /* Blog mobile */
+    .blog-item {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    .blog-title {
+        font-size: 1rem;
+    }
+
+    .blog-date {
+        font-size: 0.8rem;
+    }
+
+    .blog-excerpt {
+        font-size: 0.9rem;
+    }
+
+    /* CV mobile */
+    .cv-section {
+        margin-bottom: 25px;
+    }
+
+    .cv-section-title {
+        font-size: 1.1rem;
+    }
+
+    .cv-item {
+        padding: 8px 0;
+        margin-bottom: 12px;
+    }
+
+    .cv-item-title {
+        font-size: 0.95rem;
+    }
+
+    .cv-item-date {
+        font-size: 0.8rem;
+    }
+
+    .cv-item-subtitle {
+        font-size: 0.85rem;
+    }
+
+    /* Resource items mobile */
+    .resource-item {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .resource-title {
+        font-size: 1rem;
+    }
+
+    .resource-description {
+        font-size: 0.85rem;
+    }
+
+    .resource-link {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    /* Password modal mobile */
+    .password-modal-content {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .password-modal-content h2 {
+        font-size: 1.3rem;
+    }
+
+    #passwordInput {
+        font-size: 1rem;
+        padding: 10px 12px;
+    }
+
+    #submitPassword, #cancelPassword {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Extra small mobile (max-width: 360px) */
+@media (max-width: 360px) {
+    .main-content {
+        padding: 15px 10px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .tab {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .profile-img-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .site-title {
+        font-size: 1.3rem;
+    }
+
+    .sidebar-name {
+        font-size: 1.1rem;
+    }
+
+    .publication-item {
+        padding: 10px;
+    }
+
+    .blog-item {
+        padding: 10px;
+    }
+
+    .cv-item {
+        padding: 5px 0;
+    }
+
+    .pub-links {
+        flex-direction: column;
+    }
+
+    .pub-links a {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    /* Password Modal Responsive */
+    .password-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        overflow-y: auto;
+        padding: 20px;
+    }
+
+    .password-modal.open {
+        display: flex;
+    }
+
+    .password-modal-content {
+        background-color: white;
+        padding: 30px 20px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 90%;
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .password-modal-content h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    .password-modal-content p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    #passwordInput {
+        padding: 10px 12px;
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    #submitPassword, #cancelPassword {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+}

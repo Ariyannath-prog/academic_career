@@ -4,34 +4,44 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mobile menu toggle functionality
     const mobileToggle = document.getElementById('mobileToggle');
-    const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
+    const navDrawer = document.querySelector('.nav-drawer');
     
-    if (mobileToggle && sidebar) {
+    if (mobileToggle) {
         mobileToggle.addEventListener('click', function() {
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
-            this.innerHTML = sidebar.classList.contains('active') ? 
+            if (navDrawer) {
+                navDrawer.classList.toggle('active');
+            }
+            if (overlay) {
+                overlay.classList.toggle('active');
+            }
+            this.innerHTML = (navDrawer && navDrawer.classList.contains('active')) ? 
                 '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         });
         
         if (overlay) {
             overlay.addEventListener('click', function() {
-                sidebar.classList.remove('active');
-                overlay.classList.remove('active');
+                if (navDrawer) {
+                    navDrawer.classList.remove('active');
+                }
+                this.classList.remove('active');
                 if (mobileToggle) {
                     mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
                 }
             });
         }
         
-        // Close sidebar when clicking on a link (for mobile)
-        const sidebarLinks = sidebar.querySelectorAll('a');
-        sidebarLinks.forEach(link => {
+        // Close drawer when clicking on a link (for mobile)
+        const navLinks = document.querySelectorAll('.nav-drawer .tab');
+        navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 if (window.innerWidth <= 992) {
-                    sidebar.classList.remove('active');
-                    overlay.classList.remove('active');
+                    if (navDrawer) {
+                        navDrawer.classList.remove('active');
+                    }
+                    if (overlay) {
+                        overlay.classList.remove('active');
+                    }
                     mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
                 }
             });

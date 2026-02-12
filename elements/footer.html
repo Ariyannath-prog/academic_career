@@ -67,12 +67,22 @@
         
         <div class="footer-section">
             <h4>Follow</h4>
-           <div class="social-links">
-                <a href="https://www.linkedin.com/in/iparaj/" title="linkedin"><img src="../icon/linkedin.png" alt="linkedin logo" style="width: 30px; height: 30px;margin-right: 10px;"></a>
-                <a href="#" title="facebook"><img src="../icon/facebook.png" alt="facebook logo" style="width: 30px; height: 30px;margin-right: 10px;"></a>
-                <a href="https://github.com/iparaj" title="GitHub"><img src="../icon/github.png" alt="GitHub logo" style="width: 30px; height: 30px;margin-right: 10px;"></a>
-                <a href="#" title="Instagram"><img src="../icon/instagram.webp" alt="Instagram logo" style="width: 30px; height: 30px;margin-right: 10px;"></a>
-                <a href="https://x.com/gparaj" title="x"><img src="../icon/x.webp" alt="X logo" style="width: 30px; height: 30px;margin-right: 10px;"></a>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/iparaj/" title="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" title="Facebook" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://github.com/iparaj" title="GitHub" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" title="Instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/gparaj" title="X" target="_blank">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -81,123 +91,3 @@
         <p>© 2026 Paraj Ganchaudhuri | IIT Guwahati. All rights reserved.</p>
     </div>
 </footer>
-
-<style>
-.site-footer {
-    background: var(--primary-color);
-    color: white;
-    padding: 50px 0 20px;
-    margin-top: 50px;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    padding: 0 30px;
-}
-
-.footer-section h4 {
-    color: white;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.footer-section h4::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background: var(--accent-light);
-}
-
-.footer-section p {
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 12px;
-}
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-}
-
-.footer-links a:hover {
-    color: var(--accent-light);
-    transform: translateX(5px);
-}
-
-.footer-contact {
-    list-style: none;
-}
-
-.footer-contact li {
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.footer-contact i {
-    margin-right: 10px;
-    color: var(--accent-light);
-    width: 20px;
-}
-
-.footer-social {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.footer-social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    color: white;
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.footer-social a:hover {
-    background: var(--accent-color);
-    transform: translateY(-3px);
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
-</style>

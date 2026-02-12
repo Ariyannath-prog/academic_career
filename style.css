@@ -871,30 +871,17 @@
             transform: translateY(-5px);
         }
 
-        /* Photography Section Styles */
-        .photo-filter-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 30px;
-            background: white;
-            padding: 20px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
+        /* Footer Container - Ensure it's always visible */
+        #footer-container {
+            width: 100%;
+            clear: both;
+            position: relative;
+            z-index: 1;
         }
 
-        .photo-filter {
-            padding: 10px 20px;
-            background: var(--light-gray);
-            border: none;
-            border-radius: 6px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .photo-filter:hover {
-            background: var(--medium-gray);
+        #footer-container .site-footer {
+            margin-top: 50px;
+            width: 100%;
         }
 
         .photo-filter.active {

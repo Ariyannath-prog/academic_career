@@ -1,0 +1,456 @@
+/* ================================ */
+/* Mobile Responsive Styles         */
+/* ================================ */
+
+/* Navigation Drawer Styles */
+.nav-drawer {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.nav-drawer.active {
+    transform: translateX(0);
+}
+
+.nav-drawer-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--medium-gray);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2c5282 100%);
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.nav-drawer-header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.nav-drawer-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.nav-drawer .tab {
+    padding: 15px 20px;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    color: var(--dark-gray);
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: left;
+    border-left: 4px solid transparent;
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+.nav-drawer .tab i {
+    margin-right: 15px;
+    font-size: 1rem;
+    color: var(--accent-color);
+    width: 20px;
+    text-align: center;
+}
+
+.nav-drawer .tab:hover {
+    background-color: var(--light-gray);
+    border-left-color: var(--accent-color);
+}
+
+.nav-drawer .tab.active {
+    background-color: rgba(49, 130, 206, 0.1);
+    color: var(--accent-color);
+    border-left-color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Show nav-tabs-container on desktop by default */
+.nav-tabs-container {
+    display: block;
+}
+
+.mobile-toggle {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+.nav-drawer {
+    display: none;
+}
+
+/* Media query for tablets and small devices (max-width: 992px) */
+@media (max-width: 992px) {
+    :root {
+        --sidebar-width: 320px;
+    }
+
+    /* Hide nav-tabs-container on mobile */
+    .nav-tabs-container {
+        display: none;
+    }
+
+    /* Mobile toggle button */
+    .mobile-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: var(--accent-color);
+        color: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: var(--transition);
+    }
+
+    .mobile-toggle:hover {
+        background: var(--primary-color);
+        transform: scale(1.05);
+    }
+
+    /* Show navigation drawer on mobile */
+    .nav-drawer {
+        display: flex;
+    }
+
+    /* Overlay for mobile menu */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    /* Main content adjustments */
+    .main-content {
+        margin-left: 0;
+        padding: 40px 30px;
+        width: 100%;
+    }
+
+    /* Grid adjustments */
+    .portfolio-grid,
+    .course-grid,
+    .skills-container,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Media query for mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 30px 20px;
+    }
+
+    .nav-tabs-container {
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .tab {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .tab i {
+        font-size: 0.8rem;
+        margin-right: 5px;
+    }
+
+    /* Portfolio and grid layouts */
+    .portfolio-grid,
+    .course-grid,
+    .skills-container,
+    .footer-content,
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-box {
+        padding: 25px;
+    }
+
+    .photo-filter-tabs {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .photo-filter {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust sidebar for smaller tablets */
+    .sidebar {
+        width: 280px;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+    }
+
+    .sidebar-name {
+        font-size: 1.3rem;
+    }
+
+    .bio {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .contact-list li {
+        margin-bottom: 14px;
+    }
+
+    .contact-list a {
+        font-size: 0.95rem;
+    }
+}
+
+/* Media query for small mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .nav-tabs-container {
+        padding: 8px;
+        margin-bottom: 20px;
+        position: static;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .section-title::after {
+        width: 60px;
+    }
+
+    .tab {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+
+    .tab i {
+        margin-right: 4px;
+        font-size: 0.8rem;
+    }
+
+    /* Mobile toggle positioning */
+    .mobile-toggle {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    /* Sidebar adjustments */
+    .sidebar {
+        width: 100%;
+    }
+
+    .profile-img-container {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px;
+    }
+
+    .site-title {
+        font-size: 1.4rem;
+    }
+
+    .sidebar-name {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .sidebar-name::after {
+        width: 50px;
+    }
+
+    .bio {
+        font-size: 0.85rem;
+        padding: 12px;
+        margin-bottom: 25px;
+    }
+
+    .contact-list {
+        margin-bottom: 25px;
+    }
+
+    .contact-list li {
+        margin-bottom: 12px;
+    }
+
+    .contact-list i {
+        margin-right: 12px;
+        font-size: 1rem;
+    }
+
+    .social-links {
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .footer {
+        font-size: 0.75rem;
+        padding-top: 15px;
+    }
+
+    /* Metrics and cards */
+    .metric-card {
+        padding: 20px;
+    }
+
+    .metric-value {
+        font-size: 2rem;
+    }
+
+    .metric-label {
+        font-size: 0.8rem;
+    }
+
+    /* Links and buttons */
+    .pub-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pub-links a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Photo grid for mobile */
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .photo-item {
+        margin-bottom: 0;
+    }
+
+    .photo-img {
+        height: 200px;
+    }
+
+    .photo-content {
+        padding: 15px;
+    }
+
+    /* Back to top button */
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+
+/* Extra small devices (max-width: 360px) */
+@media (max-width: 360px) {
+    .main-content {
+        padding: 15px 10px;
+    }
+
+    .nav-tabs-container {
+        padding: 5px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .tab {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar-name {
+        font-size: 1.1rem;
+    }
+
+    .profile-section {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
+
+    .bio {
+        font-size: 0.8rem;
+    }
+
+    /* Ensure footer is visible on extra small screens */
+    #footer-container {
+        width: 100%;
+        clear: both;
+        position: relative;
+        z-index: 1;
+    }
+
+    #footer-container .site-footer {
+        width: 100%;
+        padding: 40px 0 20px;
+    }
+
+    .footer-content {
+        padding: 0 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

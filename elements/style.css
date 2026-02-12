@@ -786,6 +786,32 @@ a:hover::after {
     font-size: 0.9rem;
 }
 
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    background: var(--accent-color);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(49, 130, 206, 0.4);
+}
+
 /* Mobile Menu Toggle */
 .mobile-toggle {
     display: none;
@@ -1015,6 +1041,7 @@ a:hover::after {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
 }
 
 .password-modal-content {
@@ -1025,6 +1052,7 @@ a:hover::after {
     max-width: 400px;
     width: 90%;
     text-align: center;
+    margin: auto;
 }
 
 .password-modal-content h2 {
